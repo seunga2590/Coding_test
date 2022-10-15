@@ -1,0 +1,6 @@
+def solution(money):
+    answer = []
+    n = money//5500
+    answer.append(n)
+    answer.append(money - n*5500)
+    return answer
