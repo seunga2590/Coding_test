@@ -1,0 +1,13 @@
+def solution(s):
+    trans_ctn = 0  
+    zero_ctn = 0 
+    
+    while len(s) > 1:
+
+        new_s = s.count('1')
+        zero_ctn += len(s) - new_s
+        
+        s = bin(new_s)[2:]
+        trans_ctn += 1
+    
+    return [trans_ctn, zero_ctn]
